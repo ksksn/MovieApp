@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: #22254b;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header{
+background-color: #373b69;
+display: flex;
+padding: 1.5rem;
+justify-content: flex-end;
+}
+
+.search{
+    background-color: transparent;
+    padding: 0.5rem;
+    border-radius: 50px;
+    border: 2px solid #22254b;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: white;
+}
+
+.search::placeholder{
+    color: #5a5fa7;
+}
+
+.search:focus{
+    background-color: #22254b;
+    outline: none;
+}
+
+.movie {
+    width: 300px;
+    height: 500px;
+    background-color: #373b69;
+    border-radius: 3px;
+    box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+    margin: 2rem;
+    overflow: hidden;
+}
+
+
+.movie:hover .movie-header .movie-icon{
+    transform: translateX(-20%) translateY(-50%) scale(2);
+}
+
+.movie:hover .movie-data{
+    height: 50%;
+}
+
+.movie:hover .movie-header{
+    height: 50%;
+}
+
+.movie-header{
+    width: 100%;
+    height: 85%;
+    padding-bottom: 0.5rem;
+    transition: height 1s;
+}
+
+.movie-icon{
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+}
+
+.movie:hover .movie-data .movie-info li{
+    transform: translateX(0);
+    transition-duration: 0.5s;
+}
+
+.movie:hover .movie-data .movie-info li:nth-child(1){
+    transition-delay: 0.25s;
+}
+
+.movie:hover .movie-data .movie-info li:nth-child(2){
+    transition-delay: 0.5s;
+}
+
+.movie .movie-data .movie-info{
+    color: #eeeeee;
+}
+
+.movie .movie-data .movie-info li{
+    transform: translateX(-200%);
+    transition-delay: 0.5s;
+    transition-duration: 0;
+    margin-top: 5px;
+    list-style-type: none;
+}
+
+.movie .movie-title{
+    display: flex;
+    justify-content: space-between;
+}
+.movie .movie-data{
+    color: #eeeeee;
+    height: 15%;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+    transition: height 1s;
+    overflow: hidden;
+}
+
+.movie-data h3{
+    margin: 0;
+}
+
+
+.movie-data span{
+    background-color: #22254b;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    height: fit-content;
+    font-weight: bold;
+}
+
+.movie-data span.green {
+    color: green;
+}
+
+.movie-data span.orange {
+    color: orange;
+}
+.movie-data span.red {
+    color: red;
+}
+
